@@ -1,13 +1,13 @@
 /*
- * QR.Flutter
- * Copyright (c) 2019 the QR.Flutter authors.
+ * QR.Widget
+ * Copyright (c) 2019-2023 the QR.Widget authors.
  * See LICENSE for distribution and usage details.
  */
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:qr_flutter/qr_flutter.dart';
+import 'package:qr_widget/qr_widget.dart';
 
 void main() {
   testWidgets('QrPainter generates correct image', (WidgetTester tester) async {

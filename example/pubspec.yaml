@@ -1,8 +1,8 @@
 name: example
 description: >
-  The QR.Flutter example app.
+  The QR.Widget example app.
 version: 2.0.0
-homepage: https://github.com/lukef/qr.flutter
+homepage: https://github.com/vanyasem/qr.widget
 publish_to: none
 
 environment:
@@ -12,7 +12,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  qr_flutter:
+  qr_widget:
     path: ../
 
 dev_dependencies:

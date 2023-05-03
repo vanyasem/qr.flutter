@@ -1,6 +1,6 @@
 /*
- * QR.Flutter
- * Copyright (c) 2019 the QR.Flutter authors.
+ * QR.Widget
+ * Copyright (c) 2019-2023 the QR.Widget authors.
  * See LICENSE for distribution and usage details.
  */
 import 'package:flutter_test/flutter_test.dart';

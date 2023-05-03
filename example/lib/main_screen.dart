@@ -1,6 +1,6 @@
 /*
- * QR.Flutter
- * Copyright (c) 2019 the QR.Flutter authors.
+ * QR.Widget
+ * Copyright (c) 2019-2023 the QR.Widget authors.
  * See LICENSE for distribution and usage details.
  */
 
@@ -9,7 +9,7 @@ import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:qr_flutter/qr_flutter.dart';
+import 'package:qr_widget/qr_widget.dart';
 
 /// This is the screen that you'll see when the app starts
 class MainScreen extends StatefulWidget {
