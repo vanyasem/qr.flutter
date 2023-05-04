@@ -26,7 +26,7 @@ dependencies:
 dependencies:
   qr_widget:
     git:
-      url: git://github.com/vanyasem/qr.widget.git
+      url: https://github.com/vanyasem/qr.widget.git
 ```
 
 Keep in mind the `master` branch could be unstable.
