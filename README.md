@@ -1,5 +1,9 @@
 QR.Widget is a Flutter library for simple and fast QR code rendering via a Widget or custom painter.
 
+This is a renamed fork of [QR.Flutter](https://github.com/theyakka/qr.flutter) made mainly by [lukef](https://github.com/lukef) working for [The Yakka](https://theyakka.com/) company. You can take a look at the AUTHORS file to find a full list of contributors.
+
+The original repo is maintained poorly, and lacks proper support. You can report issues or ask for new features directly on my fork's GitHub page (the one you're on right now). I will do my best to resolve them in a timely manner.
+
 # Features
 - Null safety
 - Built on [QR - Dart](https://github.com/kevmoo/qr.dart)
