@@ -4,6 +4,8 @@ description: >
   Widget or custom painter.
 version: 5.0.0
 homepage: https://github.com/vanyasem/qr.widget
+repository: https://github.com/vanyasem/qr.widget
+issue_tracker: https://github.com/vanyasem/qr.widget/issues
 
 environment:
   sdk: '>=2.19.6 <3.0.0'
