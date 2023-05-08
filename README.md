@@ -4,6 +4,20 @@ This is a renamed fork of [QR.Flutter](https://github.com/theyakka/qr.flutter) m
 
 The original repo is maintained poorly, and lacks proper support. You can report issues or ask for new features directly on my fork's GitHub page (the one you're on right now). I will do my best to resolve them in a timely manner.
 
+#### Migraton from `qr.flutter: 4.0.0`:
+
+1) Update your `pubspec.yaml`: replace `qr_flutter: ^4.0.0` with `qr_widget: ^4.1.0`
+
+2) Change `import 'package:qr_flutter/qr_flutter.dart';` to `import 'package:qr_widget/qr_widget.dart';` everywhere in the project.
+
+You can do so by pressing **Ctrl (Cmd) + Shift + R**, which will open the "**Replace in Files**" window in Android Studio and/or VS Code.
+
+<img width="409" alt="Screenshot 2023-05-08 at 14 09 33" src="https://user-images.githubusercontent.com/13350458/236808964-4caf311d-0ec8-4ce3-83a1-52f8cde0d328.png">
+
+Then press "**Replace All**".
+
+3) `QrImage` was renamed to `QrImageView` to prevent collisions with the `qr` library. You can use "**Replace in Files**" to update your code accordingly.
+
 # Features
 - Null safety
 - Built on [QR - Dart](https://github.com/kevmoo/qr.dart)
