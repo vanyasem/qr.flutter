@@ -7,7 +7,7 @@
 import 'dart:async';
 import 'dart:ui' as ui;
 
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:qr/qr.dart';
 
 import 'qr_painter.dart';
@@ -24,7 +24,7 @@ class QrImageView extends StatefulWidget {
     super.key,
     this.size,
     this.padding = const EdgeInsets.all(10.0),
-    this.backgroundColor = Colors.transparent,
+    this.backgroundColor = _transparent,
     this.version = QrVersions.auto,
     this.errorCorrectionLevel = QrErrorCorrectLevel.L,
     this.errorStateBuilder,
@@ -35,11 +35,11 @@ class QrImageView extends StatefulWidget {
     this.semanticsLabel = 'qr code',
     this.eyeStyle = const QrEyeStyle(
       eyeShape: QrEyeShape.square,
-      color: Colors.black,
+      color: _black,
     ),
     this.dataModuleStyle = const QrDataModuleStyle(
       dataModuleShape: QrDataModuleShape.square,
-      color: Colors.black,
+      color: _black,
     ),
     this.embeddedImageEmitsError = false,
     @Deprecated('use colors in eyeStyle and dataModuleStyle instead')
@@ -58,7 +58,7 @@ class QrImageView extends StatefulWidget {
     super.key,
     this.size,
     this.padding = const EdgeInsets.all(10.0),
-    this.backgroundColor = Colors.transparent,
+    this.backgroundColor = _transparent,
     this.version = QrVersions.auto,
     this.errorCorrectionLevel = QrErrorCorrectLevel.L,
     this.errorStateBuilder,
@@ -69,11 +69,11 @@ class QrImageView extends StatefulWidget {
     this.semanticsLabel = 'qr code',
     this.eyeStyle = const QrEyeStyle(
       eyeShape: QrEyeShape.square,
-      color: Colors.black,
+      color: _black,
     ),
     this.dataModuleStyle = const QrDataModuleStyle(
       dataModuleShape: QrDataModuleShape.square,
-      color: Colors.black,
+      color: _black,
     ),
     this.embeddedImageEmitsError = false,
     @Deprecated('use colors in eyeStyle and dataModuleStyle instead')
@@ -84,6 +84,10 @@ class QrImageView extends StatefulWidget {
         ),
         _data = null,
         _qrCode = qr;
+
+  static const Color _transparent = Color(0x00000000);
+
+  static const Color _black = Color(0xFF000000);
 
   // The data passed to the widget
   final String? _data;

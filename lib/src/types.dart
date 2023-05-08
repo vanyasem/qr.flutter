@@ -4,7 +4,9 @@
  * See LICENSE for distribution and usage details.
  */
 
-import 'package:flutter/widgets.dart';
+import 'dart:ui' as ui;
+
+import 'package:flutter/foundation.dart';
 
 /// Represents a specific element / part of a QR code. This is used to isolate
 /// the different parts so that we can style and modify specific parts
@@ -66,7 +68,7 @@ class QrEyeStyle {
   final QrEyeShape? eyeShape;
 
   /// Color to tint the eye.
-  final Color? color;
+  final ui.Color? color;
 
   @override
   int get hashCode => eyeShape.hashCode ^ color.hashCode;
@@ -93,7 +95,7 @@ class QrDataModuleStyle {
   final QrDataModuleShape? dataModuleShape;
 
   /// Color to tint the data modules.
-  final Color? color;
+  final ui.Color? color;
 
   @override
   int get hashCode => dataModuleShape.hashCode ^ color.hashCode;
@@ -119,10 +121,10 @@ class QrEmbeddedImageStyle {
   /// The size of the image. If one dimension is zero then the other dimension
   /// will be used to scale the zero dimension based on the original image
   /// size.
-  final Size? size;
+  final ui.Size? size;
 
   /// Color to tint the image.
-  final Color? color;
+  final ui.Color? color;
 
   /// Check to see if the style object has a non-null, non-zero size.
   bool get hasDefinedSize => size != null && size!.longestSide > 0;

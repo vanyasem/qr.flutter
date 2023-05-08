@@ -4,8 +4,6 @@
  * See LICENSE for distribution and usage details.
  */
 
-import 'package:flutter/widgets.dart';
-
 import 'qr_versions.dart';
 
 /// An exception that is thrown when an invalid QR code version / type is

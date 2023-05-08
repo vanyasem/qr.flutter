@@ -4,7 +4,7 @@
  * See LICENSE for distribution and usage details.
  */
 
-import 'package:flutter/widgets.dart';
+import 'package:flutter/painting.dart';
 
 import 'types.dart';
 

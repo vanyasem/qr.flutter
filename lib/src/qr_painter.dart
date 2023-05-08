@@ -5,10 +5,10 @@
  */
 
 import 'dart:async';
+import 'dart:typed_data';
 import 'dart:ui' as ui;
 
-import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter/rendering.dart';
 import 'package:qr/qr.dart';
 
 import 'errors.dart';
@@ -22,7 +22,7 @@ import 'validator.dart';
 const int _finderPatternLimit = 7;
 
 // default color for the qr code pixels
-const Color? _qrDefaultColor = null;
+const ui.Color? _qrDefaultColor = null;
 
 /// A [CustomPainter] object that you can use to paint a QR code.
 class QrPainter extends CustomPainter {
@@ -36,11 +36,11 @@ class QrPainter extends CustomPainter {
     this.embeddedImageStyle,
     this.eyeStyle = const QrEyeStyle(
       eyeShape: QrEyeShape.square,
-      color: Color(0xFF000000),
+      color: ui.Color(0xFF000000),
     ),
     this.dataModuleStyle = const QrDataModuleStyle(
       dataModuleShape: QrDataModuleShape.square,
-      color: Color(0xFF000000),
+      color: ui.Color(0xFF000000),
     ),
     @Deprecated('use colors in eyeStyle and dataModuleStyle instead')
         this.color = _qrDefaultColor,
@@ -65,11 +65,11 @@ class QrPainter extends CustomPainter {
     this.embeddedImageStyle,
     this.eyeStyle = const QrEyeStyle(
       eyeShape: QrEyeShape.square,
-      color: Color(0xFF000000),
+      color: ui.Color(0xFF000000),
     ),
     this.dataModuleStyle = const QrDataModuleStyle(
       dataModuleShape: QrDataModuleShape.square,
-      color: Color(0xFF000000),
+      color: ui.Color(0xFF000000),
     ),
     @Deprecated('use colors in eyeStyle and dataModuleStyle instead')
         this.color = _qrDefaultColor,
@@ -125,13 +125,13 @@ class QrPainter extends CustomPainter {
 
   /// The color of the squares.
   @Deprecated('use colors in eyeStyle and dataModuleStyle instead')
-  final Color? color; // the color of the dark squares
+  final ui.Color? color; // the color of the dark squares
 
   /// The color of the non-squares (background).
   @Deprecated(
     'You should use the background color value of your container widget',
   )
-  final Color? emptyColor; // the other color
+  final ui.Color? emptyColor; // the other color
 
   void _init(String data) {
     if (!QrVersions.isSupportedVersion(version)) {
@@ -223,7 +223,7 @@ class QrPainter extends CustomPainter {
     // DEBUG: draw the inner content boundary
 //    final paint = Paint()..style = ui.PaintingStyle.stroke;
 //    paint.strokeWidth = 1;
-//    paint.color = const Color(0x55222222);
+//    paint.color = const ui.Color(0x55222222);
 //    canvas.drawRect(
 //        Rect.fromLTWH(paintMetrics.inset, paintMetrics.inset,
 //            paintMetrics.innerContentSize, paintMetrics.innerContentSize),
@@ -360,7 +360,7 @@ class QrPainter extends CustomPainter {
     final ui.Paint innerPaint = _paintCache
         .firstPaint(QrCodeElement.finderPatternInner, position: position)!;
     innerPaint.strokeWidth = metrics.pixelSize;
-    innerPaint.color = emptyColor ?? const Color(0x00ffffff);
+    innerPaint.color = emptyColor ?? const ui.Color(0x00ffffff);
 
     final ui.Paint? dotPaint = _paintCache.firstPaint(
       QrCodeElement.finderPatternDot,
